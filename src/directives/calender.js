@@ -17,15 +17,17 @@ const Calendar = {
         }
         if (!this.options.month)
         {
-            this.options.month = new Date().getMonth()
+            this.options.month = new Date().getMonth()+1
         }
+        this.options.month = Number(this.options.month)
+        this.options.year = Number(this.options.year)
         var std = this.getStartDay(this.options.year, this.options.month-1);
-        for (var i = 1; i <= this.numDays( this.options.month-1); i++) {
+        for (var i = 1; i <= this.numDays( this.options.month-1, this.options.year); i++) {
             dates.push([this.weekDays[std], i])
             std++
             if (std % 7 == 0){std=0}
         }
-
+console.log([this.options, dates])
         return dates
     },
 
@@ -33,9 +35,9 @@ const Calendar = {
         return yyyy % 100 === 0 ? yyyy % 400 === 0 : yyyy % 4 === 0;
     },
     
-    numDays : function(mm)
+    numDays : function(mm, yyyy)
     {
-        return mm == 3 || mm == 5 || mm == 8  || mm == 10 ? 30 : mm == 1 ?( this.isLeap(2020) ? 29 : 28 ): 31;
+        return mm == 3 || mm == 5 || mm == 8  || mm == 10 ? 30 : mm == 1 ?( this.isLeap(yyyy) ? 29 : 28 ): 31;
     },
 
     getStartDay  : function (yyyy, mm) {

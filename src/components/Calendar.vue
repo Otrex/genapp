@@ -24,6 +24,10 @@ export default {
                 //this.dates.splice(0, this.dates.length)
                 return []
             }
+            // if (this.date.year.length < 4) {
+            //     return []
+            // }
+            console.log(this.date.year)
 
             dater.options.month = this.date.month
             dater.options.year = this.date.year

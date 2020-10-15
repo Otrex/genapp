@@ -12,6 +12,9 @@ export default {
     props: {
         date: Array
     },
+    data: () => ({
+        newevent: null
+    })
 }
 </script>
 
@@ -22,6 +25,21 @@ export default {
     height: 100px;
     background: white;
     margin: 2px;
+}
+
+.date-stack-day:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 3px 3px grey;
+}
+
+.date-stack-day:hover,
+.date-stack-day:hover input {
+    background: lightsalmon;
+    color: white;
+}
+
+.date-stack-day:hover .day-number {
+    color: black;
 }
 
 .day-number {
