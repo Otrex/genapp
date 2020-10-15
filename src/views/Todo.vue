@@ -84,6 +84,10 @@ export default {
     background: white;
 }
 
+.input-ext input {
+    width: 90%;
+}
+
 .delete-btn {
     top: 0px;
     width: 40px;

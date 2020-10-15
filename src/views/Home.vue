@@ -4,8 +4,12 @@
         <HelloWorld msg="Welcome to Your Vue.js App" />
         <nav>
             <ul>
-                <li><a href="/pageBuilder"> Page Builder </a>|</li>
-                <li><a href="/calender"> Event Calender</a></li>
+                <li>
+                    <router-link to="/page-builder"> Page Builder </router-link>|
+                </li>
+                <li>
+                    <router-link to="/event-calendar"> Event Calender </router-link>
+                </li>
             </ul>
         </nav>
     </div>
@@ -28,5 +32,10 @@ export default {
 <style>
 .home-content {
     margin-top: 20%;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
 }
 </style>
