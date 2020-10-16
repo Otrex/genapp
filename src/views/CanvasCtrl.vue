@@ -43,7 +43,10 @@ export default {
     methods: {
         preview: function () {
             this.sb.options.obj.count = this.ctrl.obj.count;
-
+            if (this.ctrl.obj.count > 3000) {
+                alert("The Number you inputed is so great for our system to handle...\nPlease used a number less than 2000")
+                return
+            }
             this.convert();
             this.sb.options.obj.color = this.list_of_obj_colors
             this.sb.options.bg = this.ctrl.bg
