@@ -27,8 +27,11 @@ const Calendar = {
             std++
             if (std % 7 == 0){std=0}
         }
-console.log([this.options, dates])
+//console.log([this.options, dates])
         return dates
+    },
+    getCurrentDate : function(){
+        return new Date()
     },
 
     isLeap : function (yyyy) {
