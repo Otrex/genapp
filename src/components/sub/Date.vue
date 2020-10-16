@@ -82,7 +82,7 @@ export default {
     z-index: 100;
 }
 
-div.modal-content span.close {
+span.close {
     position: absolute;
     display: inline-block;
     background: red;

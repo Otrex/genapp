@@ -15,7 +15,11 @@ class Tag {
         return atrs
     }
     liquify() {
-        return `<${this.name} ${this.atrify()} >\n ${this.cnt.liquify()}\n </${this.name}>`;
+        return `<${this.name} ${this.atrify()} >\n ${this.cnt.map(function (e) {
+            let v
+            v += e.liquify()
+            return v
+        })}\n </${this.name}>`;
     }
 }
 

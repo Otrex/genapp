@@ -5,7 +5,7 @@
         <nav>
             <ul>
                 <li>
-                    <router-link to="/page-builder"> Page Builder </router-link>|
+                    <router-link to="/page-builder"> Page Builder </router-link>
                 </li>
                 <li>
                     <router-link to="/event-calendar"> Event Calender </router-link>

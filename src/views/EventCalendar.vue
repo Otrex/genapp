@@ -7,9 +7,9 @@
         <input type="button" class="date-inputs-form" @click="show = !show" :value="details" />
     </div>
     <div class="calender-container">
-        {{date.month}} <span v-show="date.month && date.year ">|</span> {{date.year}}
+        {{date.month}} <span v-show="date.month && date.year ">|</span> {{date.year}}<br />
         <transition name="fade">
-            <h2 class="date-display" v-show="!(date.month > 12)"> {{months[date.month-1] ?? months[defaults.month-1]}} {{date.year ?? defaults.year}}</h2>
+            <h2 class="date-display" v-show="!(date.month > 12)"> {{months[date.month-1] ?? months[defaults.month]}} {{date.year ?? defaults.year}}</h2>
         </transition>
         <transition name="fade">
             <Calendar :date="date" v-if="show" />
